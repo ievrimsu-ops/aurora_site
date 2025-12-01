@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Gift</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="overlay" id="questionScreen">
+    <h1 class="question">Hediyelerini açmak ister misin?</h1>
+    <div class="buttons">
+        <button onclick="sayYes()">Evet</button>
+        <button onclick="sayNo()">Hayır</button>
+    </div>
+</div>
+
+<div class="overlay hidden" id="noScreen">
+    <h1 class="question small">Gerçekten beğeneceksin...  
+        <br>Hediyelerini açar mısın?</h1>
+</div>
+
+<div class="menu hidden" id="giftMenu">
+    <div class="grid">
+        <div class="box" onclick="openModal('galleryModal')">📷 Anı Köşesi</div>
+        <div class="box" onclick="openModal('letterModal')">💌 Mektup</div>
+        <div class="box">
+            <a href="https://open.spotify.com/track/45LpIgOnh3OryDAuYXqTkp?si=A7o1b3F2QHeICiTgsM75tg" target="_blank">🎵 Şarkı</a>
+        </div>
+        <div class="box" onclick="openModal('flowerModal')">🌹 Çiçek</div>
+    </div>
+</div>
+
+<!-- GALERİ -->
+<div id="galleryModal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('galleryModal')">&times;</span>
+        <h2>Anılarımız</h2>
+        <p>Fotoğraflarını buraya ekleyeceğiz.</p>
+    </div>
+</div>
+
+<!-- MEKTUP -->
+<div id="letterModal" class="modal hidden">
+    <div class="modal-content letter">
+        <span class="close" onclick="closeModal('letterModal')">&times;</span>
+        <h2>Cihangir'ime</h2>
+        <p>
+        Bu siteyi senin için hazırladım. Biliyorum, çok büyük bir şey değil. 
+        Küçük bir hediye vermek istedim sana. Elimden bu geldi. 
+        En değerlim, her şeyim. Bu hayatta senden daha önemli hiçbir şey yok. 
+        Benim zihnim, kalbim, ruhum senin. Oralar seninle dolu, oralar senin yerin, 
+        oralar sana ait. Seninle sayamayacağımız kadar güzel anı biriktirmek istiyorum, 
+        şuana kadar biriktirdiklerimizin binlerce katını. Sana güzel süslü cümlelerle 
+        sevgimi anlatmak istiyorum her gün ömrüm boyunca. 
+        Bütün iltifatlar senin için bitanem. Sana çok aşığım, seni çok seviyorum. 
+        Bil ve sakın unutma olur mu?
+        </p>
+    </div>
+</div>
+
+<!-- ÇİÇEK -->
+<div id="flowerModal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('flowerModal')">&times;</span>
+        <h2>Senin İçin</h2>
+        <img src="images/bouquet.png" class="flower">
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
